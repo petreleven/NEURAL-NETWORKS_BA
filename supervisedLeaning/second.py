@@ -4,20 +4,19 @@ speed = 0.5
 height = 0.7
 cloudy = 1
 
-#MATRICE
-weights =  [
-    #speed height weather
-    [0.6,  0.7,  0.4]  ,#bball
-    [0.7,  0.3,  0.5]  , #fball
-    [0.3,  0.5,  0.7] , #tennis
+# MATRICE
+weights = [
+    # speed height weather
+    [0.6, 0.7, 0.4],  # bball
+    [0.7, 0.3, 0.5],  # fball
+    [0.3, 0.5, 0.7],  # tennis
 ]
-#VECTOR
-inputs = [  speed,
-            height,
-            cloudy]
+# VECTOR
+inputs = [speed, height, cloudy]
 weights = np.array(weights)
 inputs = np.array(inputs)
-#DOT PRODUCT
+# DOT PRODUCT
+
 
 def neuralNetwork(input):
     prediction = input.dot(weights)
@@ -36,6 +35,7 @@ def neuralNetwork(input):
 
     return [bballPred, fballPred, tennPred]
     """
+
 
 answer = neuralNetwork(inputs)
 print(answer)
